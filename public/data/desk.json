@@ -1,0 +1,49 @@
+{
+    "apps": [{
+        "icon": "https://webfollow.cc/favicon.ico",
+        "title": "Webfollow",
+        "url": "https://webfollow.cc/",
+        "full": false
+    }, {
+        "icon": "https://vscode.dev/static/stable/favicon.ico",
+        "title": "Visual Studio Code",
+        "url": "https://github1s.com/",
+        "full": false
+    }, {
+        "icon": "https://bing.vcanbb.top/web/img/logo.svg",
+        "title": "Bing",
+        "url": "https://bing.com/",
+        "full": false
+    }, {
+        "icon": "https://npm.elemecdn.com/@liumingye/cdn2/favicon.ico",
+        "title": "Music",
+        "url": "https://tools.liumingye.cn/music/",
+        "full": false
+    }, {
+        "icon": " https://qwerty.liumingye.cn/apple-touch-icon.png",
+        "title": "Qwerty",
+        "url": "https://qwerty.liumingye.cn/",
+        "full": false
+    }, {
+        "icon": "https://static.hdslb.com/mobile/img/512.png",
+        "title": "Bilibili",
+        "url": "https://bilibili.com",
+        "full": false
+    }, {
+        "icon": "https://webfollow.cc/favicon.ico",
+        "title": "子弹笔记",
+        "url": "https://weekendproject.online/journal#/",
+        "full": false
+    }, {
+        "icon": "https://weekendproject.online/favicon.ico",
+        "title": "About",
+        "url": "https://weekendproject.online/",
+        "full": false
+    }, {
+        "icon": "https://thumbs.dreamstime.com/z/md%E5%88%9D%E5%A7%8B%E5%AD%97%E6%AF%8D%E7%9F%A2%E9%87%8F%E5%9B%BE%E5%BE%BD%E6%A0%87%E5%9B%BE%E6%A0%87-199677757.jpg?w=768",
+        "title": "Readme",
+        "html": "#minos <br> minos 是一个基于网页浏览器的网页os ，因为小巧故名minos。<br> 1.minos os主界面 app launch, <br> 2.desk 支持自定义, <br> 3.目录系统，安装后会扫描目录和文件，建档，方便后期索引，<br> 4.app for docker , 应用启动，应用关闭 更多",
+        "full": false
+    }],
+    "bg": "/bg.jpg"
+}

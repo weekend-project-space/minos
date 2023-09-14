@@ -1,0 +1,25 @@
+@import "./var.less";
+
+.app {
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .app-name {
+        margin-bottom: 0;
+        padding: 0;
+        //   text-align: center;
+        color: var(--color);
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+}
