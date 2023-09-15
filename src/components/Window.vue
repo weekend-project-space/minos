@@ -40,13 +40,13 @@
       <slot>
         <iframe
           class="window-frame"
-          :style="'height:' + (height - 38) + 'px'"
+          :style="'height:' + (height - 40) + 'px'"
           :src="props.url"
           frameborder="0"
         ></iframe>
       </slot>
     </div>
-    <div class="window-tran" v-if="barPressed || isResize || loading">
+    <div class="window-tran" v-show="barPressed || isResize || loading">
       <img :src="props.icon" alt="" />
     </div>
   </div>
@@ -71,6 +71,7 @@ const props = defineProps({
   time: Number,
   full: { type: Boolean, default: () => false },
   min: { type: Boolean, default: () => false },
+  meta: { type: Object, default: () => ({}) },
 });
 
 const emit = defineEmits(["update:min", "update:full", "clickClose"]);
@@ -80,7 +81,13 @@ const { autoIncrementZ } = useDeskStore();
 const winbar = ref();
 const win = ref();
 const zindex = ref(0);
-const width = ref(window.innerWidth > 1180 ? 1180 : "100vw");
+const width = ref(
+  props.meta && props.meta.width
+    ? props.meta.width
+    : window.innerWidth > 1180
+    ? 1180
+    : "100vw"
+);
 const height = ref(
   window.innerHeight > 760 ? 760 : "calc(100vh - var(--bar-height))"
 );
@@ -336,10 +343,11 @@ const fullwarpClass = computed(() => {
 .window-body {
   min-height: calc(100% - 35px);
   min-width: 100%;
+  overflow: auto;
 }
 .window-frame {
   min-width: 100%;
-  min-height: 100%;
+  min-height: calc(100% - 4px);
 }
 .window-tran {
   min-height: 100%;

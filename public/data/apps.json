@@ -1,0 +1,72 @@
+[{
+    "icon": "https://webfollow.cc/favicon.ico",
+    "title": "Webfollow",
+    "url": "https://webfollow.cc/"
+}, {
+    "icon": "https://www.computerhope.com/jargon/a/app-stores.png",
+    "title": "Soft Store",
+    "app": "soft-store"
+}, {
+    "icon": "https://vscode.dev/static/stable/favicon.ico",
+    "title": "Visual Studio Code",
+    "url": "https://github1s.com/"
+}, {
+    "icon": "https://bing.vcanbb.top/web/img/logo.svg",
+    "title": "Bing",
+    "url": "https://bing.com/"
+}, {
+    "icon": "https://npm.elemecdn.com/@liumingye/cdn2/favicon.ico",
+    "title": "Music",
+    "url": "https://tools.liumingye.cn/music/"
+}, {
+    "icon": " https://qwerty.liumingye.cn/apple-touch-icon.png",
+    "title": "Qwerty",
+    "url": "https://qwerty.liumingye.cn/"
+}, {
+    "icon": "https://static.hdslb.com/mobile/img/512.png",
+    "title": "Bilibili",
+    "url": "https://m.bilibili.com",
+    "meta": {
+        "width": 390
+    }
+}, {
+    "icon": "https://webfollow.cc/favicon.ico",
+    "title": "子弹笔记",
+    "url": "https://weekendproject.online/journal#/"
+}, {
+    "icon": " https://h5.sinaimg.cn/m/weibo-lite/img/pwalogo.417d1674.svg",
+    "title": "weibo",
+    "url": "https://m.weibo.cn/beta",
+    "meta": {
+        "width": 390
+    }
+}, {
+    "icon": "https://h5.ele.me/favicon.ico",
+    "title": "饿了吗",
+    "url": "https://h5.ele.me/minisite/ ",
+    "meta": {
+        "width": 390
+    }
+}, {
+    "icon": "https://xw.qq.com/favicon.ico",
+    "title": "腾讯新闻",
+    "url": "https://xw.qq.com/ ",
+    "meta": {
+        "width": 390
+    }
+}, {
+    "icon": "https://m.ithome.com/favicon.ico",
+    "title": "it之家",
+    "url": "https://m.ithome.com/ ",
+    "meta": {
+        "width": 390
+    }
+}, {
+    "icon": "https://weekendproject.online/favicon.ico",
+    "title": "About",
+    "url": "https://weekendproject.online/"
+}, {
+    "icon": "https://thumbs.dreamstime.com/z/md%E5%88%9D%E5%A7%8B%E5%AD%97%E6%AF%8D%E7%9F%A2%E9%87%8F%E5%9B%BE%E5%BE%BD%E6%A0%87%E5%9B%BE%E6%A0%87-199677757.jpg?w=768",
+    "title": "Readme",
+    "html": "#minos<br> <a href='https://github.com/weekend-project-space/minos'>源码</a> <br> minos 是一个基于网页浏览器的网页os ，因为小巧故名minos。<br> 1.minos os主界面 app launch, <br> 2.desk 支持自定义, <br> 3.目录系统，安装后会扫描目录和文件，建档，方便后期索引，<br> 4.app for docker , 应用启动，应用关闭 更多"
+}]

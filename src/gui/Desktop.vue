@@ -1,7 +1,7 @@
 <template>
   <div class="desk" :style="style">
     <Bar :bar="bar" @click-close="onClose" @click-min="onMin" />
-    <Apps v-model="deskApp" @lanuch-app="lanuchApp" />
+    <Apps v-model="deskApps" @lanuch-app="lanuchApp" />
     <Dock v-model="apps" @toggle-show-app="toggleShowApp" />
     <Window
       v-for="item in apps"
@@ -10,6 +10,7 @@
       :time="item.time"
       :url="item.url"
       :icon="item.icon"
+      :meta="item.meta"
       v-model:min="item.min"
       v-model:full="item.full"
       @click-close="onClose(item)"
@@ -25,6 +26,8 @@
 <script setup>
 import { computed, onMounted, ref, watch } from "vue";
 import { useFetch, useUrlSearchParams } from "@vueuse/core";
+import { storeToRefs } from "pinia";
+import { findIndexs } from "@/utils/commons";
 
 import { useDeskStore } from "@/stores/desk";
 import Window from "@/components/Window.vue";
@@ -32,21 +35,16 @@ import Bar from "./DesktopBar.vue";
 import Apps from "./DesktopApps.vue";
 import Dock from "./DesktopDock.vue";
 
-const { bar, clearBar } = useDeskStore();
-const deskApp = ref([]);
+const { bar, clearBar, setApps } = useDeskStore();
+const { apps: deskApps } = storeToRefs(useDeskStore());
 const apps = ref([]);
 const backgroundImage = ref("/bg.jpg");
-function findIndexs(app) {
-  return apps.value
-    .map((o, i) => (o.title == app.title || o.url == app.url ? i : -1))
-    .filter((o) => o > -1);
-}
 function lanuchApp(a) {
   if (apps.value.length > 5) {
     alert("最多打开6个app");
     return;
   }
-  const appIndexs = findIndexs(a);
+  const appIndexs = findIndexs(apps.value, a);
   if (appIndexs.length < 1) {
     apps.value.push(
       Object.assign(
@@ -67,7 +65,7 @@ function toggleShowApp(i, min) {
   apps.value[i].time = new Date().getTime();
 }
 function onClose(a) {
-  apps.value.splice(findIndexs(a)[0], 1);
+  apps.value.splice(findIndexs(apps.value, a)[0], 1);
   clearBar();
 }
 const style = computed(() => {
@@ -78,14 +76,14 @@ onMounted(() => {
     const deskStr = localStorage.getItem("desk");
     if (deskStr) {
       const d = JSON.parse(deskStr);
-      deskApp.value = d.apps;
+      setApps(d.apps);
       backgroundImage.value = d.bg;
     }
     if (fetch || !deskStr) {
       const { data } = await useFetch(params.s ? params.s : "/data/desk.json")
         .get()
         .json();
-      deskApp.value = data.value.apps;
+      setApps(data.value.apps);
       backgroundImage.value = data.value.bg;
       localStorage.setItem("desk", JSON.stringify(data.value));
     }
