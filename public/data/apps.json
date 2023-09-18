@@ -25,10 +25,7 @@
 }, {
     "icon": "https://static.hdslb.com/mobile/img/512.png",
     "title": "Bilibili",
-    "url": "https://m.bilibili.com",
-    "meta": {
-        "width": 390
-    }
+    "url": "https://bilibili.com"
 }, {
     "icon": "https://webfollow.cc/favicon.ico",
     "title": "子弹笔记",
